@@ -10,6 +10,6 @@ docker run --rm \
     laravelsail/php83-composer:latest \
     composer install --ignore-platform-reqs
 ```
-3. Launch application: `bash sail up -d`
+3. Launch application: `./vendor/bin/sail up -d`
 4. Generate application key: `php artisan key:generate`
 5. Running migrations: `php artisan migrate`
