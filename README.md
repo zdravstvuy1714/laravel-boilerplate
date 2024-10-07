@@ -11,5 +11,5 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 3. Launch application: `./vendor/bin/sail up -d`
-4. Generate application key: `php artisan key:generate`
-5. Running migrations: `php artisan migrate`
+4. Generate application key: `./vendor/bin/sail php artisan key:generate`
+5. Running migrations: `./vendor/bin/sail php artisan migrate`
