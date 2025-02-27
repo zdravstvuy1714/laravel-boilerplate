@@ -1,5 +1,6 @@
 <?php
 
+use App\Console\ScheduleHandler;
 use App\Exceptions\ExceptionHandler;
 use App\Http\MiddlewareHandler;
 use Illuminate\Foundation\Application;
@@ -11,5 +12,6 @@ return Application::configure(dirname(__DIR__))
         apiPrefix: '',
     )
     ->withMiddleware(new MiddlewareHandler())
+    ->withSchedule(new ScheduleHandler())
     ->withExceptions(new ExceptionHandler())
     ->create();
