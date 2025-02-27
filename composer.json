@@ -19,7 +19,8 @@
         "laravel/telescope": "^5.5",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.6.1",
-        "phpunit/phpunit": "^11.5.10"
+        "phpunit/phpunit": "^11.5.10",
+        "roave/security-advisories": "dev-latest"
     },
     "autoload": {
         "psr-4": {
