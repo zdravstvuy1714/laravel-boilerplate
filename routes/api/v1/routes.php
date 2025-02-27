@@ -4,4 +4,4 @@ declare(strict_types=1);
 
 /** @var Illuminate\Routing\Router $router */
 
-$router->view('/', 'welcome');
+$router->get('/', static fn () => response()->json());
