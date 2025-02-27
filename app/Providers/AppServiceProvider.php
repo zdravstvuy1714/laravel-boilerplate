@@ -11,21 +11,27 @@ use Illuminate\Validation\Rules\Password;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register(): void {}
+    public function register(): void
+    {
+        if (class_exists( \Laravel\Telescope\TelescopeServiceProvider::class) && $this->app->environment('local')) {
+            $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
+            $this->app->register(TelescopeServiceProvider::class);
+        }
+    }
 
     public function boot(): void
     {
-        Password::defaults(callback: static fn(): Password => Password::min(size: 8)
+        Password::defaults(static fn(): Password => Password::min(8)
             ->letters()
             ->mixedCase()
             ->numbers()
             ->symbols()
             ->uncompromised());
 
-        Model::shouldBeStrict(shouldBeStrict: true);
+        Model::shouldBeStrict();
 
-        Relation::enforceMorphMap(map: []);
+        Relation::enforceMorphMap([]);
 
-        Date::use(handler: CarbonImmutable::class);
+        Date::use(CarbonImmutable::class);
     }
 }

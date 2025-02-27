@@ -36,7 +36,7 @@ final class MiddlewareHandler
         ]);
 
         $middleware->group('api', [
-            ThrottleRequests::using(name: 'api'),
+            ThrottleRequests::using('api'),
         ]);
     }
 }
