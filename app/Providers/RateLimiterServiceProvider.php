@@ -15,8 +15,7 @@ final class RateLimiterServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        RateLimiter::for('api', static fn(): Limit
-            => config('api.rate_limiter.enabled')
+        RateLimiter::for('api', static fn(): Limit => Config::boolean('api.rate_limiter.enabled')
             ? Limit::perMinute(
                 Config::integer('api.rate_limiter.attempts'),
                 Config::integer('api.rate_limiter.expires'),
