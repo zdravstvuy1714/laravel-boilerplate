@@ -15,3 +15,4 @@ docker run --rm \
 4. Start a shell session within the application container: `./vendor/bin/sail bash`
 5. Generate application key: $`php artisan key:generate`
 6. Running migrations: $`php artisan migrate`
+7. Do something amazing!
