@@ -3,6 +3,7 @@
     "rules": {
         "declare_strict_types": true,
         "final_class": true,
-        "void_return": true
+        "void_return": true,
+        "static_lambda": true
     }
 }
