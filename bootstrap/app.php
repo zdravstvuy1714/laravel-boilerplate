@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Console\ScheduleHandler;
 use App\Exceptions\ExceptionHandler;
 use App\Http\MiddlewareHandler;

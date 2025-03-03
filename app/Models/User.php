@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
 use Carbon\CarbonImmutable;
@@ -13,7 +15,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property CarbonImmutable $created_at
  * @property CarbonImmutable $updated_at
  */
-class User extends Authenticatable
+final class User extends Authenticatable
 {
     protected $connection = 'pgsql';
 
